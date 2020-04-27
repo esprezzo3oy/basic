@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time</title>
+</head>
+<body>
+    <div id="clock">
+        <h2>เวลาปัจจุบันของไทย</h2>
+        <div id="time">
+            <div><span id="hours">00</span><span>นาฬิกา</span></div>
+            <div><span id="minutes">00</span><span>นาที</span></div>
+            <div><span id="seconds">00</span><span>วินาที</span></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function clock() {
+            var _hours = document.getElementById('hours');
+            var _minutes = document.getElementById('minutes');
+            var _seconds = document.getElementById('seconds');
+
+            var HH = new Date().getHours();
+            var MM = new Date().getMinutes();
+            var SS = new Date().getSeconds();
+
+            HH = (HH < 10) ? "0" + HH : HH
+            MM = (MM < 10) ? "0" + MM : MM
+            SS = (SS < 10) ? "0" + SS : SS
+
+            _hours.innerHTML = HH;
+            _minutes.innerHTML = MM;
+            _seconds.innerHTML = SS;
+        }
+        var interval = setInterval(clock, 1000);
+    </script>
+</body>
+</html>

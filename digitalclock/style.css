@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@600&family=Rubik:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060a1f;
+}
+
+#clock h2 {
+    font-family: 'Athiti', sans-serif;
+    position: relative;
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 3em;
+}
+
+#clock #time {
+    display: flex;
+}
+
+#clock #time div {
+    position: relative;
+    margin: 0 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004)
+}
+
+#clock #time div span {
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    display: block;
+    width: 160px;
+    height: 120px;
+    background: #2196f3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+}
+
+#clock #time div span:nth-child(2) {
+    font-family: 'Athiti', sans-serif;
+    height: 40px;
+    font-size: 1.5em;
+    z-index: 9;
+    box-shadow: none;
+    background: #127fd6;
+}
+
+#clock #time div:last-child span {
+    background: #ff006a;
+}
+
+#clock #time div:last-child span:nth-child(2) {
+    background: #ec0062;
+}
